@@ -1,0 +1,32 @@
+
+grow()
+
+2. Associate attractors with their closest branch
+    For each branch:
+        .query the QuadTree for nearby attractors within attractionDistance
+        For each attractor in query results:
+            Compute distance
+            If distance < attractor.minDistance:
+                Update attractor.minDistance
+                Update attractor.closestBranch
+
+3. Calculate branch directions and grow new branches
+    Create a map: branchAttractorsMap = {}
+    For each attractor in the QuadTree:
+        If attractor.closestBranch is not null:
+            Add attractor to branchAttractorsMap[closestBranch]
+
+    For each branch in branchAttractorsMap:
+        Calculate average direction of attractors
+        Update branch direction
+        Create new branch
+        Reset branch
+
+4. Add new branches
+    branches.push(newBranches)
+
+5. Remove attractors within kill distance
+    For each new branch:
+        .query the QuadTree for attractors within killDistance
+        Remove attractors from QuadTree
+	
