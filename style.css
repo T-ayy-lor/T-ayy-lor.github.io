@@ -1,41 +1,46 @@
-body {
-    background-image: url('Images/background.jpg');
-    background-size: cover;
+* {
     margin: 0;
 }
 
-#layout1 {
-    display: grid;
-    place-content: center;
-    grid-template-columns: 20vw 50vw; /* Two columns: nav (left), content (right) */
-    grid-template-rows: 15vh 35vh 15vh; /* Three rows: banner, main content, footer */
-    grid-template-areas:
-        "banner banner"
-        "nav content"
-        "footer footer";
-    height: 98vh;
-    gap: 1vw;
+body {
+    background-image: url('Images/background3.png');
+    font-family: Luminari, fantasy;
 }
 
+#layout2 {
+    display: grid;
+    place-items: center;
+}
 .card {
     background-color: white;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
-    border: 2px solid black;
+    width: 90vw;
+    margin: 1vh;
+    padding: 1vh;
 }
 
 #banner {
-    grid-area: banner;
+    font-size: 10vw;
+    text-align: center;
 }
 
-#nav {
-    grid-area: nav;
+.memo {
+    min-height: 1vh; /* Ensures a minimum height but allows growth */
+    height: auto; /* Lets it expand with content */
+    display: flex; /* Helps align items */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Aligns content */
+    padding: 1vw; /* Ensures spacing */
+    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
 }
 
-#content {
-    grid-area: content;
+.memo p {
+    font-size: 3vw;
 }
 
-#footer {
-    grid-area: footer;
+.update {
+    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
+    font-size: 2vw;
 }
+
