@@ -25,6 +25,15 @@ body {
     text-align: center;
 }
 
+#nav {
+    font-size: 4vw;
+}
+
+#nav a {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
 .memo {
     min-height: 1vh; /* Ensures a minimum height but allows growth */
     height: auto; /* Lets it expand with content */
