@@ -3,18 +3,17 @@
 }
 
 body {
-    background-image: url('Images/background3.png');
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#layout2 {
     display: grid;
     place-items: center;
 }
+
+
 .card {
     background-color: white;
     border-radius: 30px;
-    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5);
     width: 90vw;
     margin: 1vh;
     padding: 1vh;
@@ -34,6 +33,11 @@ body {
     margin-right: 1vw;
 }
 
+.title {
+    font-size: 5vw;
+    margin: 1vw;
+}
+
 .memo {
     min-height: 1vh; /* Ensures a minimum height but allows growth */
     height: auto; /* Lets it expand with content */
@@ -41,10 +45,10 @@ body {
     flex-direction: column; /* Stacks items vertically */
     justify-content: center; /* Aligns content */
     padding: 1vw; /* Ensures spacing */
+    margin: 1vw;
     background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
-}
-
-.memo p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     font-size: 3vw;
 }
 
