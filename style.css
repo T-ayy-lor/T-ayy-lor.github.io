@@ -1,0 +1,41 @@
+body {
+    background-image: url('Images/background.jpg');
+    background-size: cover;
+    margin: 0;
+}
+
+#layout1 {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 20vw 50vw; /* Two columns: nav (left), content (right) */
+    grid-template-rows: 15vh 35vh 15vh; /* Three rows: banner, main content, footer */
+    grid-template-areas:
+        "banner banner"
+        "nav content"
+        "footer footer";
+    height: 98vh;
+    gap: 1vw;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+}
+
+#banner {
+    grid-area: banner;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#content {
+    grid-area: content;
+}
+
+#footer {
+    grid-area: footer;
+}
