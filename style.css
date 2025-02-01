@@ -14,50 +14,96 @@ body {
     background-color: white;
     border-radius: 30px;
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5);
-    width: 90vw;
+    width: clamp(0px, 90vw, 600px);
     margin: 1vh;
     padding: 1vh;
 }
 
 #banner {
-    font-size: 10vw;
+    font-size: clamp(0px, 10vw, 60px);
     text-align: center;
 }
 
 #nav {
-    font-size: 4vw;
+    font-size: clamp(0px, 4vw, 24px);
 }
 
 #nav a {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: clamp(0px, 1vw, 6px);
+    margin-right: clamp(0px, 1vw, 6px);
 }
 
 .title {
-    font-size: 5vw;
-    margin: 1vw;
+    font-size: clamp(0px, 5vw, 30px);
+    margin: clamp(0px, 1vw, 6px);
+    padding-bottom: clamp(0px, 1vw, 6px);
+    border-bottom: 1px solid black;
 }
 
 .memo {
-    min-height: 1vh; /* Ensures a minimum height but allows growth */
-    height: auto; /* Lets it expand with content */
-    display: flex; /* Helps align items */
-    flex-direction: column; /* Stacks items vertically */
-    justify-content: center; /* Aligns content */
-    padding: 1vw; /* Ensures spacing */
-    margin: 1vw;
+    min-height: 1vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(0px, 1vw, 6px);
+    margin: clamp(0px, 1vw, 6px);
     background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    font-size: 3vw;
+    font-size: clamp(0px, 3vw, 18px);
 }
 
 .update {
     background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
-    font-size: 2vw;
+    font-size: clamp(0px, 2vw, 12px);
 }
 
 #p5container {
-    width: 100%;
+    width: 97%;
+    margin: auto;
 }
+
+#p5container canvas {
+    box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+#treeParameters {
+    margin: clamp(0px, 1vw, 6px);
+}
+
+#treeParameters form {
+    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: clamp(0px, 1vw, 6px);
+    padding-bottom: clamp(0px, 1vw, 6px);
+}
+
+#treeParameters form input {
+    width: clamp(0px, 5vw, 30px);
+    height: clamp(0px, 5vw, 30px);
+    margin-bottom: clamp(0px, 1vw, 6px);
+    margin-top: clamp(0px, 1vw, 6px);
+}
+
+#treeParameters form label {
+    font-size: clamp(0px, 3vw, 18px);
+}
+
+.heading {
+    font-size: clamp(0px, 4vw, 24px);
+}
+
+#algorithmDesc {
+    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: clamp(0px, 1vw, 6px);
+    padding-bottom: clamp(0px, 1vw, 6px);
+    margin: clamp(0px, 1vw, 6px);
+}
+
+
+
 
