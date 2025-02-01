@@ -19,24 +19,31 @@
     </div>
 
     <div class="card">
-        <p class="title">Emergent Trees</p>
-        <div id="p5container">
-
+        <div class="projectTitle">
+            <h1>Emergent Trees</h1>
+            <h1>02/01/2025</h1>
         </div>
-        <div id="treeParameters">
-            <form>
-                <input type="text" id="attractionDistance" name="attractionDistance">
-                <label for="attractionDistance">attraction distance</label><br>
 
-                <input type="text" id="killDistance" name="killDistance">
-                <label for="killDistance">kill distance</label><br>
+        <div class="p5pane">
+            <div id="embeddedTree"></div>
 
-                <!-- <input type="text" id="numberAttractors" name="numberAttractors">
-                <label for="numberAttractors">number of attractors</label> -->
-            </form>
-        </div>
-        <div id="algorithmDesc">
-            <p class="heading">The Space Colonization Algorithm</p>
+            <div id="parameters">
+                <div id="attractorCount">
+                    <input type="text" id="attractorCount" name="attractorCount">
+                    <label for="attractorCount">attractor count</label>
+                </div>
+
+                <div id="attractionDistance">
+                    <input type="text" id="attractionDistance" name="attractionDistance">
+                    <label for="attractionDistance">attraction distance</label>
+                </div>
+
+                <div id="killDistance">
+                    <input type="text" id="killDistance" name="killDistance">
+                    <label for="killDistance">kill distance</label>
+                </div>
+            </div>
+
         </div>
     </div>
     

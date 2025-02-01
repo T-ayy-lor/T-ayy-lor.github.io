@@ -4,10 +4,10 @@ let killDistance = 5;
 
 function setup() {
   // Get the container element
-  let container = document.getElementById('p5container');
+  let container = document.getElementById('embeddedTree');
   let canvasWidth = container.offsetWidth;
   let canvas = createCanvas(canvasWidth, canvasWidth);
-  canvas.parent('p5container');
+  canvas.parent('embeddedTree');
 
   // Get references to the input elements using p5's select()
   let attractionInput = select('#attractionDistance');

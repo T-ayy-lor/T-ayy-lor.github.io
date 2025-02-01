@@ -9,6 +9,9 @@ body {
     place-items: center;
 }
 
+h1 {
+    font-weight: normal;
+}
 
 .card {
     background-color: white;
@@ -16,7 +19,7 @@ body {
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5);
     width: clamp(0px, 90vw, 1200px);
     margin: 1vh;
-    padding: 1vh;
+    padding: 2vw;
 }
 
 #banner {
@@ -59,49 +62,45 @@ body {
     font-size: clamp(0px, 2vw, 24px);
 }
 
-#p5container {
-    width: 97%;
-    margin: auto;
-}
-
-#p5container canvas {
-    box-shadow: -4px 4px 25px rgba(0, 0, 0, 0.5);
-}
-
-#treeParameters {
-    margin: clamp(0px, 1vw, 12px);
-}
-
-#treeParameters form {
-    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
-    border-top: 1px solid black;
+.projectTitle {
+    display: grid;
+    grid-template-columns: auto auto;
     border-bottom: 1px solid black;
-    padding-top: clamp(0px, 1vw, 12px);
-    padding-bottom: clamp(0px, 1vw, 12px);
+    margin-bottom: 1vw;
 }
 
-#treeParameters form input {
-    width: clamp(0px, 5vw, 60px);
-    height: clamp(0px, 5vw, 60px);
-    margin-bottom: clamp(0px, 1vw, 12px);
-    margin-top: clamp(0px, 1vw, 12px);
+.projectTitle h1:nth-of-type(2) {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9em; /* Slightly smaller */
 }
 
-#treeParameters form label {
-    font-size: clamp(0px, 3vw, 36px);
+#parameters > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.heading {
-    font-size: clamp(0px, 4vw, 48px);
+#parameters input {
+    width: 1.5em;
+    height: 1em;
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-#algorithmDesc {
-    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding-top: clamp(0px, 1vw, 12px);
-    padding-bottom: clamp(0px, 1vw, 12px);
-    margin: clamp(0px, 1vw, 12px);
+#parameters label {
+    font-size: 1.2em;
+}
+
+#parameters {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    padding-bottom: 0.3em;
+}
+
+.p5pane {
+    border: 1px solid black;
+    background-image: linear-gradient(to top, grey 0.01%, white 6%);
 }
 
 
