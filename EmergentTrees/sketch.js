@@ -50,7 +50,7 @@ function draw() {
 // This function is called automatically by p5.js when the window is resized.
 function windowResized() {
   // Recalculate the container width and corresponding height
-  let container = document.getElementById('p5container');
+  let container = document.getElementById('embeddedTree');
   let canvasWidth = container.offsetWidth;
   let aspectRatio = 1;
   // Resize the canvas to the new dimensions

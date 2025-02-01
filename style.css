@@ -82,13 +82,13 @@ h1 {
 }
 
 #parameters input {
-    width: 1.5em;
-    height: 1em;
+    width: 4em;
+    height: 1.5em;
     box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 #parameters label {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #parameters {
@@ -100,7 +100,7 @@ h1 {
 
 .p5pane {
     border: 1px solid black;
-    background-image: linear-gradient(to top, grey 0.01%, white 6%);
+    background-image: linear-gradient(to top, rgb(207, 207, 207) 0.01%, white 3%);
 }
 
 
