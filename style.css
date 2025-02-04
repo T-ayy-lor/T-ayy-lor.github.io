@@ -31,6 +31,14 @@ blockquote {
   color: gray;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
 .outsetCard {
   background-color: white;
   margin: 0.5rem;
