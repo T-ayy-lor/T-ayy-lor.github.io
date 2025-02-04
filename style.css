@@ -1,108 +1,51 @@
 * {
-    margin: 0;
-}
-
-body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    place-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-weight: normal;
+  font-weight: normal;
+  border-bottom: 1px solid black;
+  text-align: center;
 }
 
-.card {
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5);
-    width: clamp(0px, 90vw, 1200px);
-    margin: 1vh;
-    padding: 2vw;
+h2 {
+  font-weight: normal;
+  border-bottom: 1px solid black;
+  text-align: center;
 }
 
-#banner {
-    font-size: clamp(0px, 10vw, 120px);
-    text-align: center;
+nav {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
-#nav {
-    font-size: clamp(0px, 4vw, 48px);
+a {
+  text-align: center;
 }
 
-#nav a {
-    margin-left: clamp(0px, 1vw, 12px);
-    margin-right: clamp(0px, 1vw, 12px);
+blockquote {
+  font-style: italic;
+  text-align: center;
+  color: gray;
 }
 
-.title {
-    font-size: clamp(0px, 5vw, 60px);
-    margin: clamp(0px, 1vw, 12px);
-    padding-bottom: clamp(0px, 1vw, 12px);
-    border-bottom: 1px solid black;
+.outsetCard {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+
 }
 
-.memo {
-    min-height: 1vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: clamp(0px, 1vw, 12px);
-    margin: clamp(0px, 1vw, 12px);
-    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    font-size: clamp(0px, 3vw, 36px);
+.insetCard {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
 }
-
-.update {
-    background: radial-gradient(circle, rgba(160, 160, 160, 0.2) 50%, rgba(255, 255, 255, 0.1));
-    font-size: clamp(0px, 2vw, 24px);
-}
-
-.projectTitle {
-    display: grid;
-    grid-template-columns: auto auto;
-    border-bottom: 1px solid black;
-    margin-bottom: 1vw;
-}
-
-.projectTitle h1:nth-of-type(2) {
-    text-align: right;
-    font-style: italic;
-    font-size: 0.9em; /* Slightly smaller */
-}
-
-#parameters > div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-#parameters input {
-    width: 4em;
-    height: 1.5em;
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-#parameters label {
-    font-size: 1.5em;
-}
-
-#parameters {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    place-items: center;
-    padding-bottom: 0.3em;
-}
-
-.p5pane {
-    border: 1px solid black;
-    background-image: linear-gradient(to top, rgb(207, 207, 207) 0.01%, white 3%);
-}
-
-
-
-
