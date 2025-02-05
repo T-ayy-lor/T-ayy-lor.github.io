@@ -27,6 +27,7 @@ h2 {
   font-weight: normal;
   border-bottom: 1px solid black;
   margin-bottom: 0.5rem;
+  font-size: 1.4em;
 }
 
 nav {
@@ -75,7 +76,7 @@ form {
 
 form label,
 form input {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 input {
@@ -101,7 +102,6 @@ canvas {
 
 .insetCard {
   background-color: white;
-  margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -111,6 +111,7 @@ canvas {
 
 details .insetCard {
   width: auto;
+  margin-top: 0.5rem;
 }
 
 .p5Banner {
