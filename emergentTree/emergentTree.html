@@ -7,6 +7,7 @@
     <title>Tayloris Ex Eruditione</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../style.css">
+
 </head>
 
 <body>
@@ -22,11 +23,16 @@
         <h2>Emergent Trees</h2>
         <div class="insetCard" style="margin-bottom: 0; width: auto;">
             <form>
-                <input type="text" id="ruleNumber" name="ruleNumber" value="30">
-                <label for="ruleNumber">Rule Number (0-256)</label>
+                <input type="text" id="attractionDist" name="attractionDist" value="500">
+                <label for="attractionDist">Attraction Dist.</label>
+
+                <input type="text" id="killDist" name="killDist" value="5">
+                <label for="killDist">Kill Dist.</label>
             </form>
         </div>
     </div>
+    <div id="p5parent" style="width: 100%; max-width: 800px;"></div>
+
     <script src="AABB.js"></script>
     <script src="ObjectQuadTree.js"></script>
     <script src="Branch.js"></script>

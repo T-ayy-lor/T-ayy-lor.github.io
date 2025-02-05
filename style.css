@@ -71,6 +71,7 @@ canvas {
 form {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5em;
 }
 
@@ -80,7 +81,7 @@ form input {
 }
 
 input {
-  width: 3ch;
+  width: 4ch;
 }
 
 
