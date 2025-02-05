@@ -4,10 +4,23 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
 h1 {
   font-weight: normal;
   border-bottom: 1px solid black;
   text-align: center;
+}
+
+summary h1 {
+  display: inline-block;
+  border-bottom: 0;
 }
 
 h2 {
@@ -22,6 +35,15 @@ nav {
 
 a {
   text-align: center;
+  margin-top: 0.5rem;
+}
+
+details a {
+  font-size: 1.5em;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 0;
 }
 
 blockquote {
@@ -56,6 +78,8 @@ canvas {
   image-rendering: crisp-edges;
 }
 
+
+
 .outsetCard {
   background-color: white;
   margin: 0.5rem;
@@ -63,7 +87,7 @@ canvas {
   border-radius: 0.5rem;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
   max-width: 800px;
-
+  width: 100%;
 }
 
 .insetCard {
@@ -73,6 +97,11 @@ canvas {
   border-radius: 0.5rem;
   box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   max-width: 800px;
+  width: 100%;
+}
+
+details .insetCard {
+  width: auto;
 }
 
 .p5Banner {
@@ -101,3 +130,4 @@ canvas {
   overflow-wrap: break-word;
   margin-bottom: 0.5rem;
 }
+
