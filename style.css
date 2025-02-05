@@ -66,12 +66,19 @@ canvas {
   padding-top: 0.5rem;
 }
 
-form input {
-  width: 6em;
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
-form label {
-  font-size: 0.8rem;
+form label,
+form input {
+  font-size: 1.5em;
+}
+
+input {
+  width: 3ch;
 }
 
 canvas {
