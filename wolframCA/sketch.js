@@ -30,12 +30,23 @@ function setup() {
     const ruleInput = document.getElementById('ruleNumber');
     ruleInput.addEventListener('input', function () {
         let newRule = parseInt(this.value);
-        if (!isNaN(newRule) && newRule >= 0 && newRule <= 255) {
+        if (!isNaN(newRule) && newRule >= 0 && newRule <= 256) {
             ruleValue = newRule;
             console.log("New rule set to:", ruleValue);
             resetSketch(); // restart the sketch with the new rule
         }
     });
+    ruleInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          let newRule = parseInt(this.value);
+          if (!isNaN(newRule) && newRule >= 0 && newRule <= 256) {
+            ruleValue = newRule;
+            console.log("New rule set via Enter key:", ruleValue);
+            resetSketch();
+          }
+        }
+      });
 }
 
 function draw() {

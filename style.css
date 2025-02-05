@@ -25,7 +25,8 @@ summary h1 {
 
 h2 {
   font-weight: normal;
-  text-align: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
 }
 
 nav {
@@ -121,15 +122,6 @@ details .insetCard {
   place-items: center;
   margin: 0.5rem;
   margin-bottom: 0;
-}
-
-.p5Params {
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 0.5rem;
-  max-width: 800px;
 }
 
 .p5Desc p {
