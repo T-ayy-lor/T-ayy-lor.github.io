@@ -10,13 +10,23 @@
 </head>
 
 <body>
-    <div class="p5Banner">
-        <a href="../index.html" style="justify-self: right;">back</a>
-        <div class="outsetCard">
-            <h2 style="font-size: 1rem;">Wolfram Elementary Cellular Automata</h2>
-        </div>
+    <div class="outsetCard">
+        <h1>Tayloris Ex Eruditione</h1>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+        </nav>
     </div>
-    <div class="p5Desc">
+
+    <div class="insetCard">
+        <blockquote>
+            "He who learns but does not think, is lost! He who thinks but does not learn is in great danger."
+            <br> - Confucius
+        </blockquote>
+    </div>
+
+
+    <div class="p5Params">
         <form>
             <input type="text" id="ruleNumber" name="ruleNumber" value="30">
             <label for="ruleNumber">Rule Number (0-256)</label>
@@ -24,7 +34,7 @@
     </div>
 
 
-    <div id="p5parent"></div>
+    <div id="p5parent" style="align-self: flex-start;"></div>
     <script src="sketch.js"></script>
 </body>
 
