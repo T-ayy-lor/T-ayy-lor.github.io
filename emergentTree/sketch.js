@@ -18,15 +18,22 @@ function draw() {
 }
 
 function updateCanvasScale() {
-  // use the available width to calculate the scale factor.
-  const nativeWidth = 600;
+  // Define your native dimensions.
+  const nativeWidth = 800;
+  const nativeHeight = 800; // Adjust this value to your canvas's native height
+
+  // Calculate the scale factor based on the available width.
   const availableWidth = window.innerWidth;
   const scaleFactor = availableWidth / nativeWidth;
 
-  // scale
+  // Get the container element.
   const container = document.getElementById('p5parent');
+
+  // Set the container's native dimensions.
   container.style.width = nativeWidth + 'px';
-  container.style.height = 'auto';
+  container.style.height = nativeHeight + 'px';
+
+  // Apply the uniform scale transform to preserve the aspect ratio.
   container.style.transformOrigin = 'top left';
   container.style.transform = `scale(${scaleFactor})`;
 }
