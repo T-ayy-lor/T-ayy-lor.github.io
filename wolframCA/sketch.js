@@ -38,15 +38,15 @@ function setup() {
     });
     ruleInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
-          e.preventDefault();
-          let newRule = parseInt(this.value);
-          if (!isNaN(newRule) && newRule >= 0 && newRule <= 256) {
-            ruleValue = newRule;
-            console.log("New rule set via Enter key:", ruleValue);
-            resetSketch();
-          }
+            e.preventDefault();
+            let newRule = parseInt(this.value);
+            if (!isNaN(newRule) && newRule >= 0 && newRule <= 256) {
+                ruleValue = newRule;
+                console.log("New rule set via Enter key:", ruleValue);
+                resetSketch();
+            }
         }
-      });
+    });
 }
 
 function draw() {

@@ -64,8 +64,8 @@ img {
 }
 
 canvas {
-  border-top: 2px solid black;
-  padding-top: 0.5rem;
+  image-rendering: pixelated; 
+  image-rendering: crisp-edges;
 }
 
 form {
@@ -83,10 +83,7 @@ input {
   width: 3ch;
 }
 
-canvas {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
+
 
 
 
