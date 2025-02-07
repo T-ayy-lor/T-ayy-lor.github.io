@@ -96,17 +96,16 @@ function calculateState(left, state, right) {
 }
 
 function resetSketch() {
-    // Clear the main canvas
     background(255);
 
-    // Recreate the off-screen graphics buffer and clear it
+    // recreate the off-screen graphics buffer
     pg = createGraphics(canvasWidth, canvasHeight);
     pg.background(255);
 
-    // Reset the drawing position to the top
+    // reset the drawing position to the top
     y = 0;
 
-    // Reinitialize generation 0: create an array of cells with one central active cell
+    // reinitialize generation 0
     let total = canvasWidth / w;
     cells = new Array(total).fill(0);
     cells[floor(total / 2)] = 1;
