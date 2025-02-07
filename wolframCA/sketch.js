@@ -2,14 +2,14 @@
 let cells = [];
 let ruleValue = 30;
 let ruleSet = '';
-let w = 3; // width (and height) of each cell
+let w = 3; // width of each cell
 let y = 0; // current drawing y position
 
 // initial canvas dimensions
 let canvasWidth = 600;
 let canvasHeight = 600;
 
-// Off-screen graphics buffer to hold our drawing
+// buffer
 let pg;
 
 function setup() {
@@ -17,7 +17,7 @@ function setup() {
     cnv.parent('p5parent');
 
     updateCanvasScale();
-
+    
     // create the graphics buffer
     pg = createGraphics(canvasWidth, canvasHeight);
     pg.background(255);
@@ -28,14 +28,16 @@ function setup() {
     cells[floor(total / 2)] = 1;
 
     const ruleInput = document.getElementById('ruleNumber');
+
     ruleInput.addEventListener('input', function () {
         let newRule = parseInt(this.value);
         if (!isNaN(newRule) && newRule >= 0 && newRule <= 256) {
             ruleValue = newRule;
             console.log("New rule set to:", ruleValue);
-            resetSketch(); // restart the sketch with the new rule
+            resetSketch();
         }
     });
+
     ruleInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
