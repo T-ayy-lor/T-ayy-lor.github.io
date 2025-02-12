@@ -19,11 +19,22 @@ cat > "$SKETCH_NAME/$SKETCH_NAME.html" <<EOF
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
     <title>$SKETCH_NAME</title>
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <div class="outsetCard">
+    <h1>Tayloris Ex Eruditione</h1>
+    <nav>
+      <a href="../index.html">home</a>
+      <a href="../about.html">about</a>
+    </nav>
+  </div>
+
+
+  
   <script src="sketch.js"></script>
   </body>
 </html>
