@@ -14,6 +14,7 @@ function gotPoses(results) {
 function mousePressed() {
   console.log(poses);
 }
+
 function setup() {
   createCanvas(600, 480);
   video = createCapture(VIDEO);
