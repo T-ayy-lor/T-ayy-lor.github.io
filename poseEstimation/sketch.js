@@ -30,10 +30,11 @@ function draw() {
 
   if (poses.length > 0) {
     let pose = poses[0];
-    let x = pose.nose.x;
-    let y = pose.nose.y;
-    fill(255, 0, 0);
-    circle(x, y, 20);
+
+    // let x = pose.nose.x;
+    // let y = pose.nose.y;
+    // fill(255, 0, 0);
+    // circle(x, y, 20);
 
     // for (let i = 0; i < pose.keypoints.length; i++) {
     //   let keypoint = pose.keypoints[i];
