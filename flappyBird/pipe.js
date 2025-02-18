@@ -16,6 +16,9 @@ class Pipe {
 
         // pipe speeds
         this.velocity = 2;
+
+        // to ensure pipes aren't scored more than once
+        this.scored = false;
     }
 
     show() {
