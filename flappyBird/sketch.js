@@ -5,7 +5,8 @@ let generation = 0;
 let score = 0;
 
 function setup() {
-  createCanvas(650, 325);
+  let canvas = createCanvas(800, 325);
+  canvas.style('border', '1px solid black');
   colorMode(HSB, 360, 100, 100);
 
   // bird population generation staion
