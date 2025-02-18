@@ -8,6 +8,8 @@ function setup() {
   let canvas = createCanvas(800, 325);
   canvas.style('border', '1px solid black');
   colorMode(HSB, 360, 100, 100);
+  scoreElem = document.getElementById('score');
+  generationElem = document.getElementById('generation');
 
   // bird population generation staion
   for (let i = 0; i < populationSize; i++) {
@@ -35,7 +37,7 @@ function draw() {
     if (!pipes[i].scored && pipes[i].x + pipes[i].w < 64) { 
       pipes[i].scored = true;
       score++;
-      document.getElementById('score').innerText = score;
+      scoreElem.innerText = score;
     }
   }
 
@@ -114,9 +116,9 @@ function reproduction() {
   }
 
   score = 0;
-  document.getElementById('score').innerText = score;
+  scoreElem.innerText = score;
   generation++;
-  document.getElementById('generation').innerText = generation;
+  generationElem.innerText = generation;
   birds = nextBirds;
 }
 
