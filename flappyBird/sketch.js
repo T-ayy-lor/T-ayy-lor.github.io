@@ -1,6 +1,8 @@
 let populationSize = 200;
 let birds = [];
 let pipes = [];
+let generation = 0;
+let score = 0;
 
 function setup() {
   createCanvas(650, 325);
@@ -28,6 +30,11 @@ function draw() {
     pipes[i].update();
     if (pipes[i].offscreen()) {
       pipes.splice(i, 1);
+    }
+    if (!pipes[i].scored && pipes[i].x + pipes[i].w < 64) { 
+      pipes[i].scored = true;
+      score++;
+      document.getElementById('score').innerText = score;
     }
   }
 
@@ -105,6 +112,10 @@ function reproduction() {
     nextBirds[i] = new Bird(child, hue);
   }
 
+  score = 0;
+  document.getElementById('score').innerText = score;
+  generation++;
+  document.getElementById('generation').innerText = generation;
   birds = nextBirds;
 }
 
