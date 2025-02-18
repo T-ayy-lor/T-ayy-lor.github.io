@@ -1,38 +1,114 @@
-let bird;
+let populationSize = 200;
+let birds = [];
 let pipes = [];
 
 function setup() {
-  createCanvas(400, 650);
-  bird = new Bird();
+  createCanvas(650, 325);
+  colorMode(HSB, 360, 100, 100);
+
+  // bird population generation staion
+  for (let i = 0; i < populationSize; i++) {
+    let hue = map(i, 0, populationSize, 0, 360);
+    birds[i] = new Bird(null, hue);
+  }
+
+  // push pipes
   pipes.push(new Pipe());
+
+  // compute on cpu for better performance
+  ml5.setBackend("cpu");
 }
 
 function draw() {
-  background(0);
-  bird.update();
-  bird.show();
-
-  if (frameCount % 100 == 0) { // Every 40 frames
-    pipes.push(new Pipe());
-  }
-
-  for (let i = pipes.length-1; i >= 0; i--) { // Loop backwards bc deleting
+  background(250);
+  
+  // draw pipes
+  for (let i = pipes.length - 1; i >= 0; i--) {
     pipes[i].show();
     pipes[i].update();
-
-    if (pipes[i].hits(bird)) {
-      console.log("ouch");
-    }
-
     if (pipes[i].offscreen()) {
       pipes.splice(i, 1);
     }
   }
+
+  for (let bird of birds) {
+    if (bird.alive) {
+      bird.think(pipes);
+      bird.update();
+      bird.show();
+
+      for (let pipe of pipes) {
+        if (pipe.collides(bird)) {
+          bird.alive = false;
+        }
+      }
+    }
+  }
+
+  // add a new pipe every 100 frames
+  if (frameCount % 100 === 0) {
+    pipes.push(new Pipe());
+  }
+
+  // restart with new generation
+  if (allBirdsDead()) {
+    normalizeFitness();
+    reproduction();
+    resetPipes();
+  }
 }
 
-function keyPressed() {
-  if (key == ' ') {
-    console.log("SPACE");
-    bird.up();
+function allBirdsDead() {
+  for (let bird of birds) {
+    if (bird.alive) {
+      return false;
+    }
   }
+
+  // no survivors
+  return true;
+}
+
+function weightedSelection() {
+  let index = 0;
+  let start = random(1);
+  while (start > 0) {
+    start = start - birds[index].fitness;
+    index++;
+  }
+  index--;
+
+  return birds[index].brain;
+}
+
+function normalizeFitness() {
+  // get sum
+  let sum = 0;
+  for (let bird of birds) {
+    sum += bird.fitness;
+  }
+
+  // divide fitness by sum to normalize
+  for (let bird of birds) {
+    bird.fitness = bird.fitness / sum;
+  }
+}
+
+function reproduction() {
+  let nextBirds = [];
+  for (let i = 0; i < populationSize; i++) {
+    let parentA = weightedSelection();
+    let parentB = weightedSelection();
+    let child = parentA.crossover(parentB);
+    child.mutate(0.01);
+    let hue = map(i, 0, populationSize, 0, 360);
+    nextBirds[i] = new Bird(child, hue);
+  }
+
+  birds = nextBirds;
+}
+
+function resetPipes() {
+  // remove all pipes but the latest
+  pipes.splice(0, pipes.length - 1);
 }

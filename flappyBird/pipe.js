@@ -1,38 +1,50 @@
 
-function Pipe() {
-    this.top = random(height / 2);
-    this.bottom = random(height / 2);
-    this.x = width;
-    this.w = 20;
-    this.speed = 2;
-    this.hightlight = false;
+class Pipe {
+    constructor() {
+        // the gaps height between the pipes
+        this.spacing = 100;
 
-    this.hits = function(bird) {
-        if (bird.y < this.top || bird.y > height - this.bottom) {
-            if (bird.x > this.x && bird.x < this.x + this.w) {
-                this.highlight = true;
-                return true;
-            }
-        }
-        this.highlight = false;
-        return false;
+        // the gap
+        this.top = random(height - this.spacing);
+        this.bottom = this.top + this.spacing;
+
+        // begin at right edge
+        this.x = width;
+
+        // the width of the pipe
+        this.w = 20;
+
+        // pipe speeds
+        this.velocity = 2;
     }
 
-    this.show = function () {
-        fill(255);
-        if (this.highlight) {
-            fill(255, 0, 0);
-        }
+    show() {
+        // draw pipe
+        fill(0);
+        noStroke();
         rect(this.x, 0, this.w, this.top);
-        rect(this.x, height - this.bottom, this.w, this.bottom);
+        rect(this.x, this.bottom, this.w, height - this.bottom);
     }
 
-    this.update = function () {
-        this.x -= this.speed;
+    update() {
+        // move left
+        this.x -= this.velocity;
     }
 
-    this.offscreen = function() {
+    // hit bird
+    collides(bird) {
+        // is the bird within the vertical range of the top or bottom pipe
+        let verticalCollision = bird.y < this.top || bird.y > this.bottom;
+
+        // is the bird within the horizontal range of the pipes
+        let horizontalCollision = bird.x > this.x && bird.x < this.x + this.w;
+
+        // if its a hit its a hit diva
+        return verticalCollision && horizontalCollision;
+    }
+
+    // remove pipe when past left edge
+    offscreen() {
         return (this.x < -this.w);
     }
-    
 }
