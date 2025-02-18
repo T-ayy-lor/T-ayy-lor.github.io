@@ -1,4 +1,4 @@
-let populationSize = 200;
+let populationSize = 100;
 let birds = [];
 let pipes = [];
 let generation = 0;
