@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  font-weight: normal;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+summary h1 {
+  display: inline-block;
+  border-bottom: 0;
+}
+
+h2 {
+  font-weight: normal;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
+  font-size: 1.7em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+a {
+  margin-top: 0.5rem;
+}
+
+details a {
+  font-size: 1.5em;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 0;
+}
+
+blockquote {
+  font-style: italic;
+  text-align: center;
+  color: gray;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+canvas {
+  image-rendering: pixelated; 
+  image-rendering: crisp-edges;
+  
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+form label,
+form input {
+  font-size: 1.7em;
+}
+
+input {
+  width: 3.1ch;
+}
+
+
+
+
+
+.outsetCard {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  width: 98%;
+}
+
+.insetCard {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  width: 98%;
+}
+
+details .insetCard {
+  width: auto;
+  margin-top: 0.5rem;
+}
+
+.p5Banner {
+  background-color: white;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  place-items: center;
+  margin: 0.5rem;
+  margin-bottom: 0;
+}
+
+.p5Desc p {
+  display: inline-block;
+  white-space: normal;
+  overflow-wrap: break-word;
+  margin-bottom: 0.5rem;
+}
+
