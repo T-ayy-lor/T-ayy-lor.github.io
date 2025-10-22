@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TDA Web Workshop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .colorEx {
+            display: inline;
+        }
+
+        .textEx {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            color: magenta;
+            text-decoration: line-through;
+        }
+
+        .borderEx {
+            color: white;
+            background-color: darkgray;
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+            border: solid 3px black;
+            border-radius: 10px;
+        }
+
+        .backgroundEx {
+            background-image: linear-gradient(magenta, cyan);
+            font-size: 1.5em;
+            width: 50px;
+            height: 50px;
+        }
+
+        img {
+            display: block;
+            max-width: 50%;
+            height: auto;
+            margin: auto;
+        }
+
+        .mediaqueryEx {
+            width: 50px;
+            height: 50px;
+            background-color: GoldenRod;
+        }
+
+        @media (max-width: 600px) {
+            .mediaqueryEx {
+                background-color: red;
+            }
+        }
+
+        .animationEx {
+            width: 50px;
+            height: 50px;
+            background-color: steelblue;
+            position: relative;
+            animation: moveBox 1s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100px;
+            }
+        }
+
+        .childEx p {
+            color: OliveDrab;
+        }
+
+        .pseudoClassEx {
+            width: 50px;
+            height: 50px;
+            background-color: PaleVioletRed;
+        }
+
+        .pseudoClassEx:hover {
+            background-color: palegreen;
+        }
+
+        .pseudoEleEx {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .pseudoEleEx::first-letter {
+            font-size: 2em;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">TDA Web Workshop</a></h1>
+        <hr>
+    </header>
+
+    <nav>
+        <button><a href="structure.html">Structure</a></button>
+        <button><a href="layouts.html">Layouts</a></button>
+        <button><a href="styling.html">Styling</a></button>
+        <button><a href="scripting.html">Scripting</a></button>
+        <button><a href="resources.html">Resources</a></button>
+        <button><a href="example.html">Example</a></button>
+        <hr>
+    </nav>
+
+    <main>
+        <h2>Colors</h2>
+        <p>Colors can be defined using named, hex, RGB, or HSLA values.</p>
+        <div class="colorEx" style="color: red">Named</div>
+        <div class="colorEx" style="color: #ff0000">Hex</div>
+        <div class="colorEx" style="color: rgb(255, 0, 0)">RGB</div>
+        <div class="colorEx" style="color: hsla(0, 100%, 50%, 1)">HSLA</div>
+        <br>
+        <br>
+        <p>See <a href="https://www.w3schools.com/html/html_colors.asp">W3schools</a>.</p>
+
+        <h2>Text</h2>
+        <p>Text can be styled using color, font-family, font-size, font-weight, line-height, text-align,
+            text-decoration, and more.</p>
+        <div class="textEx">Example</div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css_text.asp">W3schools</a>.</p>
+
+        <h2>Borders</h2>
+        <p>Use the border property to define border thickness, style, color, and the border-radius property to create
+            rounded corners.</p>
+        <div class="borderEx"></div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css_border.asp">W3schools</a>.</p>
+
+        <h2>Shadows</h2>
+        <p>Use the box-shadow property to apply shadows to elements, and the text-shadow property to add shadows to
+            text.</p>
+        <div class="borderEx" style="box-shadow: -2px 2px 5px black"></div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css3_shadows.asp">W3schools</a>.</p>
+
+        <h2>Backgrounds</h2>
+        <p>Use the background-color property to fill the background with a solid color.</p>
+        <p>Use the background-image property to display an image, or apply linear-gradient() or radial-gradient() to
+            create color transitions.</p>
+        <div class="backgroundEx"></div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css3_backgrounds.asp">W3schools</a>.</p>
+
+        <h2>Units</h2>
+        <p>For sizing elements, CSS supports both absolute and relative units for sizing elements.</p>
+        <p>Absolute units, like px, define fixed measurements that do not scale with the page.</p>
+        <p>Relative units, like %, em, and rem, adjust based on the parent or root font size.
+            Additionally, viewport units, vw and vh, scale with the browser window.</p>
+        <div style="font-size: 18px;">18px</div>
+        <div style="font-size: 1.5em;">1.5em</div>
+        <div style="font-size: 1.5rem;">1.5rem</div>
+        <div style="font-size: 2.5vw;">1.5vw</div>
+        <div style="font-size: 1.5vh;">1.5vh</div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css_units.asp">W3schools</a>.</p>
+
+        <h2>Scaling</h2>
+        <p>All your HTML elements should be styled so that they can be viewed on any type of screen.</p>
+        <p>A common trick for scaling elements is to set the element's max-width to 100% (any % will do) and it's height
+            to auto, allowing to to scale with it's container while maintaining it's proportions.</p>
+        <img src="images/cat.jpg">
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css3_images.asp">W3schools</a>.</p>
+
+        <h2>Media Queries</h2>
+        <p>Media Queries apply CSS properties when certain conditions are met.</p>
+        <p>Their syntax follows @media (property: value), meaning "if that property equals that value, then the
+            contained css is applied".</p>
+        <div class="mediaqueryEx"></div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css3_mediaqueries.asp">W3schools</a>.</p>
+
+        <h2>Animation</h2>
+        <p>Animations use keyframes to define a start and end state. Apply them with the animation property to fade,
+            slide,
+            or rotate elements.</p>
+        <div class="animationEx"></div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/css/css3_animations.asp">W3schools</a>.</p>
+
+        <h2>Combinators</h2>
+        <p>Elements nested within other elements can be targeted.</p>
+        <div class="childEx">
+            <p>Example</p>
+        </div>
+        <p>See <a href="https://www.w3schools.com/cssref/css_ref_combinators.php">W3schools</a>.</p>
+
+        <h2>Pseudo-Classes</h2>
+        <p>Targets elements in a specific state.</p>
+        <div class="pseudoClassEx"></div>
+        <br>
+        <p>See <a href="https://www.w3schools.com/cssref/css_ref_pseudo_classes.php">W3schools</a>.</p>
+
+        <h2>Pseudo-Elements</h2>
+        <p>Pseudo-elements let you style specific parts of an element's content</p>
+        <div class="pseudoEleEx">The</div> <br>
+        <p>See <a href="https://www.w3schools.com/cssref/css_ref_pseudo_elements.php">W3schools</a>.</p>
+
+    </main>
+
+    <footer>
+        &copy; Taylor O'Neal for the 2025 TDA Web Workshop
+    </footer>
+
+</body>
+
+</html>

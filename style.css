@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+a {
+    text-decoration: underline;
+    color: rgb(0, 0, 174);
+}
+
+h1 {
+    text-align: center;
+    margin: 0.5em;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+nav {
+    text-align: center;
+}
+
+nav button {
+    font-size: 2.5vw;
+}
+
+@media (min-width: 700px) {
+    nav button {
+        font-size: 17.5px;
+    }
+}
+
+button>a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+
+h2,
+h3 {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+b {
+    font-weight: bold;
+}
+
+ul {
+    margin-bottom: 1em;
+}
+
+li {
+    margin-left: 1em;
+}
+
+footer {
+    width: fit-content;
+    border: solid 1px black;
+    margin: auto;
+    padding: 0.5em;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TDA Web Workshop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .banner {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+        }
+
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 100%;
+            box-shadow: -2px 2px 7px gray;
+            margin-bottom: 2em;
+            margin-top: 1em;
+        }
+
+        .banner h1 {
+            font-size: 5vw;
+            color: rgb(82, 82, 82);
+        }
+
+        .banner p {
+            color: gray;
+            font-style: italic;
+            font-size: 2.8vw;
+            text-align: center;
+        }
+
+        @media (min-width: 970px) {
+            .banner h1 {
+                font-size: 3em;
+            }
+
+            .banner p {
+                font-size: 1.7em;
+            }
+        }
+
+        .block h2 {
+            background-image: linear-gradient(white, lightgrey);
+            width: fit-content;
+            padding: 0.5em;
+            color: rgb(82, 82, 82);
+            text-decoration: none;
+            border: solid 1px gray;
+            font-style: italic;
+            box-shadow: -1px 1px 5px gray;
+            flex-shrink: 0;
+        }
+
+        .block {
+            background-image: linear-gradient(to bottom, rgb(236, 236, 236), white 50%, rgb(236, 236, 236));
+            padding: 1em;
+            border: 1px solid gray;
+            box-shadow: -2px 2px 5px gray;
+            margin-bottom: 1em;
+        }
+
+        .block p {
+            color: gray;
+            margin: 0;
+        }
+
+        .blockHead {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+
+        .blockHead hr {
+            flex: 1;
+        }
+
+        .block h3 {
+            text-decoration: none;
+            color: rgb(82, 82, 82);
+        }
+
+        .blockRowLeft {
+            text-align: left;
+            margin-bottom: 1em;
+        }
+
+        .blockRowLeft h3 {
+            display: inline;
+            white-space: nowrap;
+        }
+
+        .blockRowLeft p {
+            display: inline;
+            white-space: normal;
+        }
+
+        .blockRowRight {
+            text-align: right;
+            margin-bottom: 1em;
+        }
+
+        .blockRowRight h3 {
+            display: inline;
+            white-space: nowrap;
+        }
+
+        .blockRowRight p {
+            display: inline;
+            white-space: normal;
+        }
+
+        .blockPair {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 750px) {
+            .blockPair {
+                flex-direction: row;
+                justify-content: center;
+                align-items: stretch;
+                gap: 1em;
+            }
+
+            .blockPair .block {
+                flex: 1 1 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">TDA Web Workshop</a></h1>
+        <hr>
+    </header>
+
+    <nav>
+        <button><a href="structure.html">Structure</a></button>
+        <button><a href="layouts.html">Layouts</a></button>
+        <button><a href="styling.html">Styling</a></button>
+        <button><a href="scripting.html">Scripting</a></button>
+        <button><a href="resources.html">Resources</a></button>
+        <button><a href="example.html">Example</a></button>
+        <hr style="height: 1px; background-color: black;">
+    </nav>
+
+    <main>
+        <div class="banner">
+            <img src="images/scout-headshot.jpg">
+            <div>
+                <h1>SCOUT THE RETRIEVER</h1>
+                <p>Building fetch-based solutions since 2020.</p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="blockHead">
+                <h2>About Me</h2>
+                <hr>
+            </div>
+            <p>I’m Scout, a golden retriever with a passion for efficiency, whether that means optimizing fetch cycles
+                or maximizing nap time. When I’m not debugging squeaky toys or testing new ball retrieval protocols, I
+                specialize in full stack attention management, from head pats to belly rubs. My professional interests
+                include cloud computing (watching them roll by), data storage (burying things), and bed real estate
+                acquisition, where I maintain a firm 90% ownership policy.</p>
+        </div>
+
+        <div class="blockPair">
+            <div class="block">
+                <div class="blockHead">
+                    <hr>
+                    <h2>Skills</h2>
+                </div>
+                <div class="blockRowLeft">
+                    <h3>LANGUAGES:</h3>
+                    <p>Fetch++, Paw-thon, BarkScript.</p>
+                </div>
+                <div class="blockRowLeft">
+                    <h3>FRAMEWORKS:</h3>
+                    <p>React-And-Retrieve, Tailwind(literally), Node-Nose</p>
+                </div>
+                <div class="blockRowLeft">
+                    <h3>TOOLS:</h3>
+                    <p>Tennis Ball, Kong IDE, GitBone</p>
+                </div>
+                <div class="blockRowLeft">
+                    <h3>SOFT SKILLS:</h3>
+                    <p>High energy collaboration, Bed real estrate negotion</p>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="blockHead">
+                    <h2>Projects</h2>
+                    <hr>
+                </div>
+                <div class="blockRowRight">
+                    <p>Developed a distributed tennis ball retrieval system with 99% uptime</p>
+                    <h3> - Project Fetch</h3>
+                </div>
+                <div class="blockRowRight">
+                    <p>Trained humans to understand complex bark syntax through repetition</p>
+                    <h3> - Bark Recognition AI</h3>
+                </div>
+                <div class="blockRowRight">
+                    <p>Implemented real-time monitoring with low false positives</p>
+                    <h3> - Squirrel Detection Network</h3>
+                </div>
+                <div class="blockRowRight">
+                    <p>Coded using pure enthusiasm and minimal understanding of HTML</p>
+                    <h3> - Pawfolio Website</h3>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="blockHead">
+                <h2>Experience</h2>
+                <hr>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Senior Fetch Engineer,</h3>
+                <p>Neighborhood Parks Division</p>
+                <p>— Designed and implemented high-throughput ball retrieval systems across multiple terrains. Reduced
+                    average fetch latency by 42% through optimized chase algorithms and predictive trajectory modeling.
+                </p>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Lead Nap Researcher,</h3>
+                <p>Institute of Rest and Relaxation</p>
+                <p>— Conducted longitudinal studies on the correlation between belly rub frequency and nap quality.
+                    Published findings in “The Journal of Canine Comfort.” Implemented scalable nap scheduling protocols
+                    adopted household-wide.</p>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Snack Acquisition Specialist,</h3>
+                <p>Pantry Systems Inc.</p>
+                <p>— Pioneered new methods for low-noise treat procurement. Demonstrated advanced problem-solving in
+                    latch bypass techniques and container infiltration. Improved overall snack yield per hour by 37%.
+                </p>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Head of Tail Optimization,</h3>
+                <p>Canine Motion Labs</p>
+                <p>— Spearheaded iterative improvements in tail-wag velocity and consistency. Utilized agile methodology
+                    to deliver continuous enthusiasm updates across multiple human endpoints.</p>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Junior Hydration Technician,</h3>
+                <p>Mudwater Research Initiative</p>
+                <p>— Monitored and tested various liquid compositions from puddles, sprinklers, and water bowls. Drafted
+                    compliance documentation regarding acceptable splash ratios and tongue efficiency metrics.</p>
+            </div>
+            <div class="blockRowLeft" style="margin-bottom: 0;">
+                <h3>Freelance Paw Model,</h3>
+                <p>Petwear Innovations</p>
+                <p>— Collaborated with brand designers to showcase cutting-edge collar aesthetics and pawwear
+                    ergonomics. Drove 15% engagement growth on social media through consistent cuteness deliverables.
+                </p>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="blockHead">
+                <hr>
+                <h2>Contact</h2>
+            </div>
+            <p>To schedule a consultation, collaboration, or belly rub session, please contact Scout’s management team
+                through one of the following channels:</p><br>
+
+            <div class="blockRowLeft">
+                <h3>Email:</h3>
+                <p><a href="mailto:press@scoutenterprise.dog">press@scoutenterprise.dog</a></p>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Human Resources:</h3>
+                <p>Taylor O’Neal, Lead Human, Snack Distribution Department.</p>
+            </div>
+            <div class="blockRowLeft">
+                <h3>Socials:</h3>
+                <p><a href="#">@scouttheretriever</a> on Barkstagram and SnoutHub.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy; Taylor O'Neal for the 2025 TDA Web Workshop
+    </footer>
+
+</body>
+
+</html>
