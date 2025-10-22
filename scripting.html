@@ -99,6 +99,7 @@
     </footer>
 
     <script>
+        // keypad example
         document.addEventListener("keydown", (event) => {
             const key = event.key.toLowerCase();
             if (["w", "a", "s", "d"].includes(key)) {
@@ -117,9 +118,11 @@
             }
         });
 
+        // button example
         const affirmations = ["You did it!", "Nice work!", "Keep going!", "You're doing great!", "Excellent job!"];
         let i = 0;
         buttonClick.onclick = () => text.innerText = affirmations[i++ % affirmations.length];
+
     </script>
 </body>
 
